@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Repository.ContextRepository&lt;TEntity&gt;">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAABAAAAAAAJAAAAAAAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Repositories\ContextRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+      <Field Name="_dbSet" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBase.FitnessContext">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <AssociationLine Name="Clubs" Type="System.Data.Entity.DbSet&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="3" />
+        <Point X="11" Y="2.062" />
+        <Point X="11.5" Y="2.062" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.108" Y="-0.253" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ClubsPass" Type="System.Data.Entity.DbSet&lt;TEntity&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="4.156" />
+        <Point X="13.49" Y="4.156" />
+        <Point X="13.49" Y="1.75" />
+        <Point X="13" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Users" Type="System.Data.Entity.DbSet&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="3.812" />
+        <Point X="12.875" Y="3.812" />
+        <Point X="12.875" Y="2.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.005" Y="0.966" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Workouts" Type="System.Data.Entity.DbSet&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="3.5" />
+        <Point X="12.441" Y="3.5" />
+        <Point X="12.441" Y="2.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.018" Y="0.239" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Clubs" />
+      <Property Name="ClubsPass" />
+      <Property Name="Users" />
+      <Property Name="Workouts" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Data.Entity.DbSet&lt;TEntity&gt;" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Repository.IGenericRepository&lt;TEntity&gt;">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Interfaces\IGenericRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

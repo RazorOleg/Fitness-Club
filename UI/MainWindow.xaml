@@ -1,0 +1,51 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Головне меню" Height="507.313" Width="1610" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid IsReadOnly="True" x:Name ="clubPassList" HorizontalAlignment="Left" Height="256" AutoGenerateColumns="False" Margin="462,124,0,0" VerticalAlignment="Top" Width="522">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width = "100" Header="Фітнес клуб" Binding="{Binding Club.Name}"/>
+                <DataGridTextColumn Width = "80" Header="Місто" Binding="{Binding Club.City}"/>
+                <DataGridTextColumn Width = "90" Header="Адреса" Binding="{Binding Club.Address}"/>
+                <DataGridTextColumn Width = "90" Header="Абонемент" Binding="{Binding Name}"/>
+                <DataGridTextColumn Width = "110" Header="К-сть відвідувань" Binding="{Binding AvailableNumberOfVisits}"/>
+                <DataGridTextColumn Width = "50" Header="Ціна" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="630,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontSize="18" FontWeight="Bold"><Run Text="Дошка "/><Run Text="абонемент"/><Run Text="і"/><Run Text="в"/></TextBlock>
+        <Button Content="Додати абонемент" HorizontalAlignment="Left" Height="35" Margin="462,404,0,0" VerticalAlignment="Top" Width="172" FontSize="16" Click="Button_Click_AddClubPass" Background="#FF6692F0" Foreground="White"/>
+        <Button Content="Видалити абонемент" HorizontalAlignment="Left" Height="35" Margin="804,404,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click_RemoveClubPass" Background="#FFF0F0F0" FontSize="16"/>
+        <DataGrid IsReadOnly="True" x:Name ="workoutList" HorizontalAlignment="Left" Height="255" AutoGenerateColumns="False" Margin="1032,124,0,0" VerticalAlignment="Top" Width="522">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width = "115" Header="Тип тренування" Binding="{Binding Type}"/>
+                <DataGridTextColumn Width = "100" Header="Фітнес клуб" Binding="{Binding Club.Name}"/>
+                <DataGridTextColumn Width = "80" Header="Місто" Binding="{Binding Club.City}"/>
+                <DataGridTextColumn Width = "90" Header="Адреса" Binding="{Binding Club.Address}"/>
+                <DataGridTextColumn Width = "85" Header="Дата" Binding="{Binding Time, StringFormat=dd.MM.yyyy HH:mm}"/>
+                <DataGridTextColumn Width = "50" Header="Ціна" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="1234,92,0,0" TextWrapping="Wrap" Text="Разові заняття" VerticalAlignment="Top" Width="140" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+        <Button Content="Додати заняття" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="1032,404,0,0" Height="35" Background="#FF6692F0" FontSize="16" Click="Button_Click_AddWorkout" Foreground="White"/>
+        <Button Content="Видалити заняття" HorizontalAlignment="Left" Height="35" Margin="1374,404,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click_RemoveWorkout" FontSize="16"/>
+        <Rectangle Fill="#FFF0F0F0" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="1601"/>
+        <DataGrid  IsReadOnly="True" x:Name ="clubList" HorizontalAlignment="Left" Height="256" AutoGenerateColumns="False" Margin="42,124,0,0" VerticalAlignment="Top" Width="371">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width = "150" Header="Фітнес клуб" Binding="{Binding Name}"/>
+                <DataGridTextColumn Width = "110" Header="Місто" Binding="{Binding City }"/>
+                <DataGridTextColumn Width = "110" Header="Адреса" Binding="{Binding Address }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="150,90,0,0" TextWrapping="Wrap" Text="Дошка клубів" VerticalAlignment="Top" Width="138" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.79,0.643"/>
+        <Button Content="Додати клуб" HorizontalAlignment="Left" Height="35" Margin="42,404,0,0" VerticalAlignment="Top" Width="138" FontSize="16" Click="Button_Click_AddClub" Background="#FF6692F0" Foreground="White"/>
+        <Button Content="Видалити клуб" HorizontalAlignment="Left" Height="35" Margin="275,404,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click_RemoveClub" Background="#FFF0F0F0" FontSize="16"/>
+        <Button Content="Управління клієтами" HorizontalAlignment="Left" Height="36" Margin="1394,13,0,0" VerticalAlignment="Top" Width="160" FontSize="16" Background="#FF6692F0" Click="Button_Click_UserControl" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="603,6,0,0" TextWrapping="Wrap" Text="Головне меню" VerticalAlignment="Top" Width="280" FontSize="36" FontWeight="Bold" Foreground="#FF6692F0"/>
+
+    </Grid>
+</Window>
